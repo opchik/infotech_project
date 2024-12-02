@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Table</title>
+    <style>
+        table {
+            width: 80%;
+            margin: auto;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">Data Table</h1>
+    <table>
+        <tr>
+            <th>NE</th>
+            <th>Address</th>
+            <th>Latitude</th>
+            <th>Longitude</th>
+            <th>GSM</th>
+            <th>UMTS</th>
+            <th>LTE</th>
+            <th>Status</th>
+        </tr>
+        {% for item in data %}
+        <tr>
+            <td>{{ item.ne }}</td>
+            <td>{{ item.address }}</td>
+            <td>{{ item.latitude }}</td>
+            <td>{{ item.longitude }}</td>
+            <td>{{ item.gsm }}</td>
+            <td>{{ item.umts }}</td>
+            <td>{{ item.lte }}</td>
+            <td>{{ item.status }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
